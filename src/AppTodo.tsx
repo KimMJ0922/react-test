@@ -1,5 +1,5 @@
 import "./App.css";
-import {ChangeEvent, ChangeEventHandler, KeyboardEventHandler, useState} from "react";
+import {ChangeEventHandler, KeyboardEventHandler, useState} from "react";
 
 interface ITodo {
   id : number,
@@ -31,7 +31,7 @@ function AppTodo() {
     }
   }
 
-  const handleClick = (id, done) => {
+  const handleClick = (id: number, done : boolean) => {
     const newTodos = todos.map(item => {
       if(item.id === id){
         return {...item, done} ;
